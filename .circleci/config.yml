@@ -34,16 +34,16 @@ jobs:
           root: .
           paths:
             - ./image.tar
-    # deploy:
-    #   executor: docker-publisher
-    #   steps:
-    #     - run:
-    #         name: Install deployment requirements then provision and deploy
-    #         command: |
-    #           . venv/bin/activate
-    #           pip install --upgrade pip
-    #           pip install -r deploy_requirements.txt
-    #           ansible-playbook provision_deploy.yml -vv
+    deploy:
+      executor: docker-publisher
+      steps:
+        - run:
+            name: Install deployment requirements then provision and deploy
+            command: |
+              . venv/bin/activate
+              pip install --upgrade pip
+              pip install -r deploy_requirements.txt
+              ansible-playbook provision_deploy.yml -vv
   publish-latest:
     executor: docker-publisher
     steps:
