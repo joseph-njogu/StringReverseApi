@@ -1,6 +1,6 @@
 # version of the docker compose
 version: "3.3"
-
+# Home home
 #We can have many services for example db
 # For our case we assume we are using sqlite3 database for development
 services:
@@ -11,4 +11,4 @@ services:
     volumes:
       - .:/DockerHOME
     ports:
-      - 8000:8000
+      - "8000:8000"

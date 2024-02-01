@@ -1,7 +1,7 @@
 ---
 - name: Build the Cloud Environment
-  hosts: localhost
-  connection: local
+  hosts: all
+  # connection: local
   gather_facts: False
   vars_files:
     - ./vars/everything.yml
